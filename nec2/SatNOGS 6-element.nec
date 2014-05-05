@@ -1,0 +1,47 @@
+CM SatNOGS 6-element Yagi Antenna
+CM
+CM Copyright (C) 2014 Vasilis Tsiligiannis <acinonyx@openwrt.gr>
+CM
+CM This program is free software: you can redistribute it and/or modify
+CM it under the terms of the GNU General Public License as published by
+CM the Free Software Foundation, either version 3 of the License, or
+CM (at your option) any later version.
+CM
+CM This program is distributed in the hope that it will be useful,
+CM but WITHOUT ANY WARRANTY; without even the implied warranty of
+CM MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+CM GNU General Public License for more details.
+CM
+CM You should have received a copy of the GNU General Public License
+CM along with this program.  If not, see <http://www.gnu.org/licenses/>.
+CM
+CM Tuned at 144.300MHz
+CM Vertical polarization
+CM 2m above imperfect ground
+CM Ground relative dielectric const. 5, conductivity 1mS/m
+CM 4mm cylindrical aluminum wires, conductivity 35MS/m
+CM
+CE 
+GW     1    21  0.00000E+00 -2.47887E-01  0.00000E+00  0.00000E+00  2.47887E-01  0.00000E+00  1.92533E-03
+GW     2    21  1.25147E-01 -2.41389E-01  0.00000E+00  1.25147E-01  2.41389E-01  0.00000E+00  1.92533E-03
+GW     3    21  1.90127E-01 -2.29115E-01  0.00000E+00  1.90127E-01  2.29115E-01  0.00000E+00  1.92533E-03
+GW     4    21  4.06726E-01 -2.24783E-01  0.00000E+00  4.06726E-01  2.24783E-01  0.00000E+00  1.92533E-03
+GW     5    21  7.07560E-01 -2.24783E-01  0.00000E+00  7.07500E-01  2.24783E-01  0.00000E+00  1.92533E-03
+GW     6    21  9.53039E-01 -2.18525E-01  0.00000E+00  9.53039E-01  2.18525E-01  0.00000E+00  1.92533E-03
+GM     0     0  90.0000E+00  0.00000E+00  0.00000E+00 -1.25147E-01  0.00000E+00  0.00000E+00  0.00000E+00
+GS     0     0  2.07756E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+GM     0     0  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  2.00000E+00  0.00000E+00
+GE     1     0  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+FR     0    21     0      0  1.44000E+02  1.00000E-01  1.46000E+02  0.00000E+00  0.00000E+00  0.00000E+00
+EK     0     0     0      0  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+LD     5     1     0      0  3.50000E+07  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+LD     5     2     0      0  3.50000E+07  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+LD     5     3     0      0  3.50000E+07  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+LD     5     4     0      0  3.50000E+07  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+LD     5     5     0      0  3.50000E+07  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+LD     5     6     0      0  3.50000E+07  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+KH     0     0     0      0  1.50000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+EX     0     2    11      0  1.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+GN     2     0     0      0  5.00000E+00  1.00000E-03  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
+RP     0    91    73      0  0.00000E+00  0.00000E+00  1.00000E+00  5.00000E+00  0.00000E+00  0.00000E+00
+EN     0     0     0      0  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00  0.00000E+00
