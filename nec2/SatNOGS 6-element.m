@@ -25,56 +25,89 @@
 # Single reflector and single radiator design is assumed.
 
 antenna.elements = [ 0, 1030e-3
-                    260e-3, 1003e-3
-                    395e-3, 952e-3
-                    845e-3, 934e-3
-                    1470e-3, 934e-3
-                    1980e-3, 908e-3 ];
+                     260e-3, 1003e-3
+                     395e-3, 952e-3
+                     845e-3, 934e-3
+                     1470e-3, 934e-3
+                     1980e-3, 908e-3 ] * 144.3e6 / 145e6;
 antenna.diameter = 4e-3;
 
 # Center frequency
-frequency = 144.300e6;
+frequency = 145e6;
 
 # DO NOT EDIT BELOW!!!
 
 # Constants
+
 # Speed of light
 c = 299792458;
 
-# Calculate lamda
-lamda = c / frequency;
+# Functions
 
-# Duplicate last column and divide by lamda
-antenna.elements = [ antenna.elements, antenna.elements(:, end) / ...
-                    2] / lamda;
+# Appends half values from last column
+#
+# Parameters
+#       mat             Matrix to append
+# 
+# Returns
+#       mat-append      Resulting matrix
+
+function ret_mat = append_last_col_half (mat)
+  ret_mat = [ mat, mat(:, end) / 2];
+endfunction
+
+# Converts frequency to wavelength
+#
+# Parameters
+#       freq            Frequency
+#       c               Speed of light
+#
+# Returns
+#       wave            Wavelength
+
+function ret_wave = freq_to_wave (freq, c)
+  ret_wave = c / freq;
+endfunction
+
+# Main
+
+# Sanity checks
 
 # Check if we have at least 2 elements
 if rows(antenna.elements) < 2
-    error("Antenna with less than two elements");
+  error("Antenna with less than two elements");
 endif
 
 # Check if reflector is at position zero
-if antenna.elements(1,1) != 0
-    error("Reflector position is not zero");
+if antenna.elements(1, 1) != 0
+  error("Reflector position is not zero");
 endif
+
+# Calculate wavelength
+wave = freq_to_wave(frequency, c);
+
+# Duplicate last column
+antenna.elements = append_last_col_half(antenna.elements);
+
+# Divide by wavelength
+antenna.wave = antenna.elements / wave;
 
 # Print description
 printf("Yagi-Uda antenna wavelength size calculator\n\n");
 
-# Print lamda
-printf("Lambda:\t\t%eλ\n", lamda);
+# Print wavelength
+printf("Wavelength:\t%eλ\n\t\t(%eHz)\n", wave, frequency);
 # Print element diameter
-printf("Diameter:\t%eλ\n\n", antenna.diameter / lamda);
+printf("Diameter:\t%eλ\n\t\t(%em)\n\n", antenna.diameter / wave, antenna.diameter);
 
 # Print header row
 printf("Element\t\tPosition\tLength\t\tHalf length\n");
 
 # Print reflector
-printf("Reflector:\t%eλ\t%eλ\t%eλ\n", antenna.elements'(:, 1));
+printf("Reflector:\t%eλ\t%eλ\t%eλ\n\t\t%em\t%em\t%em\n", [ antenna.wave'(:, 1); antenna.elements'(:, 1) ]);
 # Print radiator
-printf("Radiator:\t%eλ\t%eλ\t%eλ\n", antenna.elements'(:, 2));
+printf("Radiator:\t%eλ\t%eλ\t%eλ\n\t\t%em\t%em\t%em\n", [ antenna.wave'(:, 2); antenna.elements'(:, 2) ]);
 # Check if directors exist and print them
 if rows(antenna.elements) > 2
-    printf("Director:\t%eλ\t%eλ\t%eλ\n", antenna.elements'(:, ...
-        3:end));
+  printf("Director:\t%eλ\t%eλ\t%eλ\n\t\t%em\t%em\t%em\n", [ antenna.wave'(:, 3:end); antenna.elements'(:, 3:end) ]);
 endif
