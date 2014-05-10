@@ -12,7 +12,7 @@ w = 7; 	  //Mount wall width
 
 module mount_outer(){
 	union(){
-		translate([axis/2,0,0])
+		translate([axis/2+1,0,0])
 			cylinder(d=axis+2*w,h=mast+2*w,center=true);
 		translate([-mast/2,0,0])
 			cube([mast+2*w,axis+2*w,mast+2*w],center=true);
@@ -21,7 +21,7 @@ module mount_outer(){
 
 module mount_inner(){
 	union(){
-		translate([axis/2,0,0])
+		translate([axis/2+1,0,0])
 			cylinder(d=axis,h=mast+2*w+1,center=true);
 		translate([-mast/2,0,0])
 			cube([mast,axis+2*w+1,mast],center=true);
