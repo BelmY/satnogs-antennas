@@ -2,7 +2,7 @@
 #
 # Yagi-Uda antenna wavelength size calculator
 #
-# Copyright (C) 2014 Vasilis Tsiligiannis <acinonyx@openwrt.gr>
+# Copyright (C) 2014-2015 Vasilis Tsiligiannis <acinonyx@openwrt.gr>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -24,13 +24,14 @@
 # position (reflector) should always be zero. All sizes are in
 # Single reflector and single radiator design is assumed.
 
-antenna.elements = [ 0, 1030e-3
-                     260e-3, 1003e-3
-                     395e-3, 952e-3
-                     845e-3, 934e-3
-                     1470e-3, 934e-3
-                     1980e-3, 908e-3 ] * 144.3e6 / 145e6;
-antenna.diameter = 4e-3;
+antenna.dc = 1;
+antenna.elements = [ 0, 1030e-3 * antenna.dc
+                     260e-3, 1003e-3 * antenna.dc
+                     395e-3, 952e-3 * antenna.dc
+                     845e-3, 934e-3 * antenna.dc
+                     1470e-3, 934e-3 * antenna.dc
+                     1980e-3, 908e-3 * antenna.dc ] * 142.75e6 / 145e6;
+antenna.diameter = 8e-3;
 
 # Center frequency
 frequency = 145e6;
