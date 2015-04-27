@@ -2,7 +2,7 @@
 
 Antennas for SatNOGS project
 
-More information can be found in our [documentation](https://satnogs.org/hardware.html).
+More information can be found in our [documentation](https://satnogs.org/documentation/hardware/).
 
 ## License
 
