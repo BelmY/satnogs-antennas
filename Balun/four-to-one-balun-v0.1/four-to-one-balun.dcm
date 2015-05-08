@@ -1,0 +1,8 @@
+EESchema-DOCLIB  Version 2.0  Date: Fri 08 May 2015 12:42:34 EEST
+#
+$CMP CLAMP
+D 1 pin
+K CLAMP
+$ENDCMP
+#
+#End Doc Library

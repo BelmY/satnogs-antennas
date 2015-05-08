@@ -1,0 +1,38 @@
+Cmp-Mod V01 Created by PcbNew date = Fri 08 May 2015 13:57:34 EEST
+
+BeginCmp
+TimeStamp = /554C6393;
+Reference = P1;
+ValeurCmp = N-TYPE;
+IdModule  = NTYPE_EDGE;
+EndCmp
+
+BeginCmp
+TimeStamp = /554C63A0;
+Reference = P2;
+ValeurCmp = N-TYPE;
+IdModule  = NTYPE_EDGE;
+EndCmp
+
+BeginCmp
+TimeStamp = /554C63A6;
+Reference = P3;
+ValeurCmp = N-TYPE;
+IdModule  = NTYPE_EDGE;
+EndCmp
+
+BeginCmp
+TimeStamp = /554C872F;
+Reference = P4;
+ValeurCmp = CLAMP;
+IdModule  = DRILL_4mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /554C8713;
+Reference = P5;
+ValeurCmp = CLAMP;
+IdModule  = DRILL_4mm;
+EndCmp
+
+EndListe

@@ -1,0 +1,174 @@
+EESchema Schematic File Version 2
+LIBS:four-to-one-balun
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "4:1 Balun"
+Date "8 may 2015"
+Rev "0.1"
+Comp "Libre Space Foundation"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L N-TYPE P1
+U 1 1 554C6393
+P 3300 3650
+F 0 "P1" H 3310 3770 60  0000 C CNN
+F 1 "N-TYPE" V 3410 3590 40  0000 C CNN
+F 2 "~" H 3300 3650 60  0000 C CNN
+F 3 "~" H 3300 3650 60  0000 C CNN
+	1    3300 3650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L N-TYPE P2
+U 1 1 554C63A0
+P 4200 3650
+F 0 "P2" H 4210 3770 60  0000 C CNN
+F 1 "N-TYPE" V 4310 3590 40  0000 C CNN
+F 2 "~" H 4200 3650 60  0000 C CNN
+F 3 "~" H 4200 3650 60  0000 C CNN
+	1    4200 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L N-TYPE P3
+U 1 1 554C63A6
+P 4200 4300
+F 0 "P3" H 4210 4420 60  0000 C CNN
+F 1 "N-TYPE" V 4310 4240 40  0000 C CNN
+F 2 "~" H 4200 4300 60  0000 C CNN
+F 3 "~" H 4200 4300 60  0000 C CNN
+	1    4200 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 554C63C2
+P 4200 3950
+F 0 "#PWR01" H 4200 3950 30  0001 C CNN
+F 1 "GND" H 4200 3880 30  0001 C CNN
+F 2 "" H 4200 3950 60  0000 C CNN
+F 3 "" H 4200 3950 60  0000 C CNN
+	1    4200 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 554C63D1
+P 3300 3950
+F 0 "#PWR02" H 3300 3950 30  0001 C CNN
+F 1 "GND" H 3300 3880 30  0001 C CNN
+F 2 "" H 3300 3950 60  0000 C CNN
+F 3 "" H 3300 3950 60  0000 C CNN
+	1    3300 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 554C63DE
+P 4200 4600
+F 0 "#PWR03" H 4200 4600 30  0001 C CNN
+F 1 "GND" H 4200 4530 30  0001 C CNN
+F 2 "" H 4200 4600 60  0000 C CNN
+F 3 "" H 4200 4600 60  0000 C CNN
+	1    4200 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 3650 4050 3650
+Wire Wire Line
+	4200 3850 4200 3950
+Wire Wire Line
+	3300 3850 3300 3950
+Wire Wire Line
+	4200 4500 4200 4600
+$Comp
+L CLAMP P5
+U 1 1 554C8713
+P 4000 4100
+F 0 "P5" H 4080 4100 40  0000 L CNN
+F 1 "CLAMP" H 4000 4155 30  0001 C CNN
+F 2 "" H 4000 4100 60  0000 C CNN
+F 3 "" H 4000 4100 60  0000 C CNN
+	1    4000 4100
+	0    1    -1   0   
+$EndComp
+$Comp
+L CLAMP P4
+U 1 1 554C872F
+P 4000 3450
+F 0 "P4" H 4080 3450 40  0000 L CNN
+F 1 "CLAMP" H 4000 3505 30  0001 C CNN
+F 2 "" H 4000 3450 60  0000 C CNN
+F 3 "" H 4000 3450 60  0000 C CNN
+	1    4000 3450
+	0    1    -1   0   
+$EndComp
+$Comp
+L PWR_FLAG #FLG04
+U 1 1 554C8745
+P 3300 4500
+F 0 "#FLG04" H 3300 4595 30  0001 C CNN
+F 1 "PWR_FLAG" H 3300 4680 30  0000 C CNN
+F 2 "" H 3300 4500 60  0000 C CNN
+F 3 "" H 3300 4500 60  0000 C CNN
+	1    3300 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 554C8752
+P 3300 4600
+F 0 "#PWR05" H 3300 4600 30  0001 C CNN
+F 1 "GND" H 3300 4530 30  0001 C CNN
+F 2 "" H 3300 4600 60  0000 C CNN
+F 3 "" H 3300 4600 60  0000 C CNN
+	1    3300 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 4500 3300 4600
+Wire Wire Line
+	4000 4250 4000 4300
+Wire Wire Line
+	4000 4300 4050 4300
+Wire Wire Line
+	4000 3600 4000 3650
+Connection ~ 4000 3650
+$EndSCHEMATC
