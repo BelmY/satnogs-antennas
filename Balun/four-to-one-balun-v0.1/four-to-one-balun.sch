@@ -38,7 +38,7 @@ encoding utf-8
 Sheet 1 1
 Title "4:1 Balun"
 Date "8 may 2015"
-Rev "0.1"
+Rev "0.2"
 Comp "Libre Space Foundation"
 Comment1 ""
 Comment2 ""
